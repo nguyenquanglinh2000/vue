@@ -55,7 +55,7 @@
     }
   }
 </script>
-<style>
+<style scoped>
   input[type=text]:focus{
     color:snow;
   }

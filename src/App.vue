@@ -23,9 +23,9 @@ export default {
 
   }
 }
-</script>
+</script >
 
-<style lang="scss">
+<style lang="scss"scoped>
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap');
 $image-path: '~@/../mdb/mdbvue/img';

@@ -54,7 +54,7 @@
     }
 </script>
     
-<style>
+<style scoped>
 .itemTask li {
         list-style-type:decimal-leading-zero;
     }

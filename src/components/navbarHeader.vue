@@ -9,7 +9,7 @@
                     <mdb-nav-item >All task(<span style="color:#cc9900">{{todo.length}}</span>)</mdb-nav-item>
                     <mdb-nav-item >Task completed(<span style="color:#00ff00">{{completedList.length}}</span>)</mdb-nav-item>
                 </mdb-navbar-nav>
-                <mdb-input label="Add task" v-model="newTask" />
+                <mdb-input label="Add task" v-model="newTask" id="addtask" />
                 <mdb-btn color="info" type="submit" style="margin-left:30px" @click="addTask(newTask)">Add</mdb-btn>  
             </mdb-navbar-toggler>
         </mdb-navbar>
@@ -49,14 +49,14 @@
       addTask(newTask ){
         console.log('run add');
         // event.defaultPrevented();
-        this.addTodo.push({id:999, title:newTask, completed:false});
+        this.addTodo.push({id:Math.random()*100, title:newTask, completed:false});
         this.newTask ='';
       }
     }
   }
 </script>
-<style scoped>
-  input[type=text]:focus{
+<style>
+   input[type=text]:focus{
     color:snow;
   }
 </style>

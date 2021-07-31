@@ -3,6 +3,7 @@
         <ul>
             <item-task v-for="(task, index) in todo" :key="index" :task="task" @deleteTask="deleteTask"/>
         </ul>
+        <!-- <p v-once>{{thongbao}} - {{test()}}</p> -->
     </div>
 </template>
 
@@ -14,7 +15,7 @@ import {mapState} from 'vuex'
         name: '',
         data () {
             return {
-
+                thongbao:"Day la thong bao"
             }
         },
         components:{
@@ -37,7 +38,10 @@ import {mapState} from 'vuex'
                 if(indexDelete != -1){
                     this.todo.splice(indexDelete,1);
                 }
-            }
+            },
+            // test:function(){
+            //     return this.thongbao = "Day la thong bao update"
+            // }
         }
     }   
 </script>

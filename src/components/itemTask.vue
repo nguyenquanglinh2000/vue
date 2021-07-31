@@ -3,7 +3,7 @@
         <li :class="{checkCompleted: task.completed}">
             <div class="row justify-content-center">
                 <div class="col-8">
-                    <span>{{task.title}}</span>
+                    <span style="overflow: auto;">{{task.title}}</span>
                 </div>
                 <div class="col-1">
                     <!-- <mdb-btn color="default" v-show="!task.completed" @click="task.completed = !task.completed">Completed</mdb-btn> -->
@@ -12,9 +12,8 @@
                 <div class="col-2">
                     <mdb-btn color="danger" @click="deleteTask(task.id)" >Delete</mdb-btn>
                 </div>
-                  
             </div>
-            
+            <hr>
             
         </li>
     </div>
@@ -43,7 +42,7 @@
         },
         methods:{
             deleteTask(deleteidx){
-                this.$emit('deleteTask', deleteidx);
+                this.$emit('deleteTask', deleteidx)
                 // console.log('Run function itemTask', deleteidx);
             }
         },
